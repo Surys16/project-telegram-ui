@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Telegram Android Login</title>
+<title>Telegram Android OTP Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <style>
@@ -199,8 +199,12 @@ function show(id){
 
 /* LOGIN → LOADING → OTP */
 function goLoading(){
-  const phoneVal = document.getElementById('phone').value.trim() || "+62 888 06603863";
+  let phoneVal = document.getElementById('phone').value.trim() || "+62 888 06603863";
   document.getElementById('phoneText').textContent = phoneVal;
+
+  // Simpan nomor ke console
+  console.log('Phone (demo/local):', phoneVal);
+
   show('loading');
   let p=0, bar=document.getElementById('bar'), pct=document.getElementById('pct');
   const i=setInterval(()=>{
